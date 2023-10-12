@@ -12,10 +12,6 @@ module "subnet_addrs_hub" {
       new_bits = 10
     },
     {
-      name     = "firewall_management"
-      new_bits = 10
-    },
-    {
       name     = "vpngateway"
       new_bits = 11
     },
