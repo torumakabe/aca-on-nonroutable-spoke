@@ -1,0 +1,12 @@
+$ORIGIN onpremexample.corp.
+$TTL 1m
+@       IN  SOA     ns.onpremexample.corp. admin.onpremexample.corp. (
+                         1111111111     ; Serial
+                         1m             ; Refresh
+                         2m             ; Retry
+                         4m             ; Expire
+                         1m)            ; Minimum TTL
+@       IN  A       127.0.0.1
+@       IN  NS      onpremexample.corp.
+ns      IN  CNAME   @
+apache  IN  A       ${APACHE_IP}

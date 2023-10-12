@@ -1,0 +1,17 @@
+vnetexample.corp {
+  forward . ${RESOLVER_IP}
+  log
+  errors
+}
+
+onpremexample.corp {
+  file /config/db.onpremexample.corp
+  log
+  errors
+}
+
+. {
+  forward . 168.63.129.16
+  log
+  errors
+}
