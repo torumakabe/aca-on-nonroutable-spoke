@@ -2,7 +2,7 @@
 
 ## Background
 
- In some cases, it is difficult to assign a large address space in the enterprise network when using services that require a large address space such as Azure Container Apps. This sample divides the virtual network of the landing zone into noutable and non-routable, and assigns a carrier-grade NAT address space (RFC 6598 - 100.64.0.0/10) to the non-routable side.
+ In some cases, it is difficult to assign a large address space in the enterprise network when using services that require a large address space such as Azure Container Apps. This sample divides the virtual network of the landing zone into routable and non-routable, and assigns a carrier-grade NAT address space (RFC 6598 - 100.64.0.0/10) to the non-routable side.
 
 ## Overview
 
