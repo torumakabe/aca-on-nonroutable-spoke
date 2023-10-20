@@ -108,7 +108,7 @@ resource "azurerm_container_group" "onprem_resolver" {
   os_type             = "Linux"
 
   container {
-    name   = "ca-onprem-resolver"
+    name   = "coredns"
     image  = "coredns/coredns:1.11.1"
     cpu    = "1.0"
     memory = "1.0"

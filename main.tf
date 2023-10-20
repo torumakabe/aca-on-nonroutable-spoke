@@ -4,7 +4,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.76.0"
+      version = "~> 3.77.0"
     }
 
     azapi = {
@@ -37,7 +37,7 @@ resource "random_string" "vpngateway_shared_key" {
 }
 
 resource "azurerm_resource_group" "ca_nonroutable_sample" {
-  name     = "rg-ca-nonroutable-sample"
+  name     = "rg-ca-nonroutable-sample${var.rg_suffix}"
   location = "eastus"
 }
 
