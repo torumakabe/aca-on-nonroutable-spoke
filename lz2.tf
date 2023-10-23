@@ -55,8 +55,8 @@ resource "azurerm_virtual_network_peering" "lz2_routable_to_hub" {
   remote_virtual_network_id = azurerm_virtual_network.hub.id
 
   allow_forwarded_traffic = true
-  use_remote_gateways     = true
-
+  // Just for prppagation of route to on-premises
+  use_remote_gateways = true
 }
 
 resource "azurerm_virtual_network_peering" "lz2_routable_to_nonroutable" {

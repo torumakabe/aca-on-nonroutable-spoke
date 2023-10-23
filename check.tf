@@ -50,7 +50,7 @@ resource "azurerm_container_group" "check_onprem_to_lz1" {
 
   // Waiting for execution
   provisioner "local-exec" {
-    command = "sleep 120"
+    command = "sleep 180"
   }
 }
 
@@ -67,7 +67,7 @@ resource "azapi_resource_action" "ci_check_onprem_to_lz1_start" {
 
   // Waiting for execution
   provisioner "local-exec" {
-    command = "sleep 60"
+    command = "sleep 120"
   }
 }
 
@@ -130,7 +130,7 @@ resource "azurerm_container_group" "check_onprem_to_lz2" {
 
   // Waiting for execution
   provisioner "local-exec" {
-    command = "sleep 60"
+    command = "sleep 180"
   }
 }
 
