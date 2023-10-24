@@ -132,6 +132,8 @@ resource "azurerm_subnet" "hub_private_dns_resolver_outbound" {
   }
 }
 
+// TODO: At this time, default route cannot be associated for some services such as Application Gateway, so SNAT is needed at the hub. If the service can associate a default route, SNAT may not be necessary.
+// https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-private-deployment?tabs=portal#route-table-control
 resource "azurerm_firewall_policy" "hub_snat" {
   name                = "afwp-hub"
   resource_group_name = azurerm_resource_group.ca_nonroutable_sample.name
